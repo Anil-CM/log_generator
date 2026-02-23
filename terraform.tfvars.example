@@ -1,0 +1,29 @@
+# Example configuration for generating 100MB+ logs
+# Copy this file to terraform.tfvars and adjust values as needed
+
+# For ~100MB logs, use these settings:
+log_iterations          = 50000
+log_message_size        = 2000
+resource_count_tier1    = 150
+resource_count_tier2    = 150
+resource_count_tier3    = 150
+resource_count_tier4    = 100
+iterations_per_resource = 150
+
+# For ~50MB logs (faster execution):
+# log_iterations          = 20000
+# log_message_size        = 1500
+# resource_count_tier1    = 100
+# resource_count_tier2    = 100
+# resource_count_tier3    = 100
+# resource_count_tier4    = 50
+# iterations_per_resource = 100
+
+# For ~200MB+ logs (very large, slow execution):
+# log_iterations          = 100000
+# log_message_size        = 3000
+# resource_count_tier1    = 200
+# resource_count_tier2    = 200
+# resource_count_tier3    = 200
+# resource_count_tier4    = 150
+# iterations_per_resource = 200
